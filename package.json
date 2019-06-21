@@ -1,0 +1,24 @@
+{
+  "name": "internet-shop",
+  "version": "1.0.0",
+  "description": "Final Kodilla project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bodeck/internet-shop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bodeck/internet-shop/issues"
+  },
+  "homepage": "https://github.com/Bodeck/internet-shop#readme",
+  "devDependencies": {
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.4"
+  }
+}
