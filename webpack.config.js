@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = env => {
   console.log(env);
+  console.log(path.resolve(__dirname, 'dist'));
   return {
     mode: env,
     entry: './src/index.js',
