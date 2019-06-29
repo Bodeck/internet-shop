@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import { Footer } from './Footer';
 
 class MainLayout extends Component {
   render() {
     return (
       <div>
-        <Header pageName="This is test" />
-        <div className="container">
+        <Header cartItemsCount={15} />
+        <main className="container">
           {this.props.children}
-        </div>
+        </main>
+        <Footer />
       </div>
     )
   }
