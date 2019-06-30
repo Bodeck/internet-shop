@@ -1,24 +1,15 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import MainLayout from './MainLayout';
-import Home from './Home';
-import Product from './Product';
-import Contact from './Contact';
-import Cart from './Cart';
-import NoMatch from './NoMatch';
+import { BrowserRouter as Router } from 'react-router-dom';
+import routes from '../routes';
+import MainLayout from './main-layout/MainLayout'
+
 
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router routes={routes}>
         <MainLayout>
-          <Switch>
-            <Route exact path={"/"} component={Home} />
-            <Route exact path={"/contact"} component={Contact} />
-            <Route exact path={"/cart"} component={Cart} />
-            <Route exact path={"/product"} component={Product} />
-            <Route component={NoMatch} />
-          </Switch>
+          {routes}
         </MainLayout>
       </Router>
     )
