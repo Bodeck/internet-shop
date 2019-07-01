@@ -11,7 +11,7 @@ export default (
       <Route exact path={"/"} component={HomePage} />
       <Route exact path={"/contact"} component={Contact} />
       <Route exact path={"/cart"} component={Cart} />
-      <Route exact path={"/product"} component={Product} />
+      <Route exact path={"/product/:id"} component={Product} />
       <Route component={NoMatch} />
     </Switch>
 )
