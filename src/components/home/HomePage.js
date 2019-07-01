@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { ProductList } from './ProductList';
+import { SortingWidget } from './SortingWidget';
+import './HomePage.css';
 
 export default class HomePage extends Component {
   constructor(props) {
@@ -45,34 +48,18 @@ export default class HomePage extends Component {
     }
   }
 
-
   render() {
     return (
       <div className="home-page">
-        <aside className="left-sidebar">
-
-        </aside>
-        <section className="products-section">
-          <ProductList products={this.state.products} />
-        </section>
+        <div className="row">
+          <aside className="col-3 left-sidebar">
+            <SortingWidget />
+          </aside>
+          <section className="col-9 products-section">
+            <ProductList products={this.state.products} />
+          </section>
+        </div>
       </div>
     );
   }
-}
-
-const ProductList = props => {
-  const productList = props.products.map(product => {
-    return (
-      <div key={product.id}>
-        <span>{product.name}</span>
-        <span>{product.basePrice}</span>
-      </div>
-    )
-  })
-
-  return (
-    <div className="product-list">
-      {productList}
-    </div>
-  )
 }
