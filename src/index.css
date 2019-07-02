@@ -1,9 +1,11 @@
+@import './assets/MyriadPro/style.css';
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Myriad Pro Regular", Arial, Helvetica, sans-serif;
     margin: 0;
 }
 

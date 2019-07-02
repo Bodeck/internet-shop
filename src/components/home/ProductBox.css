@@ -64,6 +64,11 @@
 
 .product-box-img-container {
   align-self: center;
+  background-image: url(../../assets/images/product.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 90%;
+  height: 200px;
 }
 
 .footer-bottom {

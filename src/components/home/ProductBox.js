@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import './ProductBox.css';
 
 const ProductBox = props => {
-  const imgUrl = 'https://via.placeholder.com/400x200';
+  const imgUrl = '../../assets/images/product.png';
   return (
     <div className="col-md-6 col-sm-12">
       <div className="product-box">
@@ -18,11 +18,11 @@ const ProductBox = props => {
             </a>
           </span>
         </div>
-        <div className="product-box-img-container">
           <Link to={"/product/" + props.product.id}>
-            <img src={imgUrl} alt={props.product.name}/>
-          </Link>
+        <div className="product-box-img-container">
+            {/* <img src={imgUrl} alt={props.product.name}/> */}
         </div>
+          </Link>
         <div className="product-box-footer">
           <h3 className="product-name change-on-hover">{props.product.name}</h3>
           <div className="footer-bottom">
