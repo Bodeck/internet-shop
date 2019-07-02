@@ -5,10 +5,10 @@
   height: 500px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .product-box-header {
-  /* padding: 30px; */
   position: relative;
 }
 
@@ -24,10 +24,9 @@
 }
 
 .product-box-footer {
-  position: absolute;
-  bottom: 0;
-  padding: 5px;
   font-size: 18px;
+  width: 100%;
+  align-self: flex-end;
 }
 
 .product-name {
@@ -37,11 +36,14 @@
 }
 
 .base-price {
-  font-size: 18px;  
+  font-size: 18px;
+  opacity: .7;
 }
 
 .add-to-cart {
   font-size: 18px;
+  display: block;
+  justify-self: flex-end;
 }
 
 .visible-on-hover {
@@ -57,5 +59,22 @@
 }
 
 .product-box:hover .change-on-hover {
-  font-weight: bolder;
+  font-weight: 500;
+}
+
+.product-box-img-container {
+  align-self: center;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.favourite-marker-ico, .add-to-cart {
+  color: #000000;
+}
+
+.favourite-marker-ico {
+  font-size: 20px;
 }
