@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ProductList } from './ProductList';
 import { SortingWidget } from './SortingWidget';
 import './HomePage.css';
+import Pagination from './Pagination';
 
 export default class HomePage extends Component {
   constructor(props) {
@@ -57,6 +58,7 @@ export default class HomePage extends Component {
           </aside>
           <section className="col-9 products-section">
             <ProductList products={this.state.products} />
+            <Pagination pageCount={5} />
           </section>
         </div>
       </div>
