@@ -11,41 +11,45 @@ export default class HomePage extends Component {
       products: [
         {
           id: 1,
-          name: "Product 1",
-          basePrice: 122.00,
-          discount: 0
+          name: "SuperOpticon 2000",
+          basePrice: 12.00,
+          description: "Sample product description. Product description placeholder.",
+          advertMessage: "Extra deal"
         },
         {
           id: 2,
-          name: "Product 2",
-          basePrice: 122.00,
-          discount: 0
+          name: "SunBlaster Light",
+          basePrice: 60.00,
+          description: "Sample product description. Product description placeholder.",
+          advertMessage: "New collection!"
         },
         {
           id: 3,
-          name: "Product 3",
+          name: "Karina XL",
           basePrice: 122.00,
-          discount: 0
+          description: "Sample product description. Product description placeholder.",
         },
         {
           id: 4,
-          name: "Product 1",
-          basePrice: 122.00,
-          discount: 0
+          name: "Panama Jack",
+          basePrice: 120.00,
+          description: "Sample product description. Product description placeholder.",
         },
         {
           id: 5,
-          name: "Product 2",
+          name: "Blackhole Sun",
           basePrice: 122.00,
-          discount: 0
+          description: "Sample product description. Product description placeholder.",
+          advertMessage: "Bestseller"
         },
         {
           id: 6,
-          name: "Product 3",
+          name: "Arnold",
           basePrice: 122.00,
-          discount: 0
+          description: "Sample product description. Product description placeholder.",
         }
-      ]
+      ],
+      favouriteList: [1, 6,]
     }
   }
 

@@ -45,7 +45,12 @@
   display: block;
   justify-self: flex-end;
 }
-
+.add-to-cart-icon {
+  width: 25px;
+  height: 25px;
+  transform: translateY(-2px);
+  margin-right: 14px;
+}
 .visible-on-hover {
   opacity: 0;
   transition: all .5s;
