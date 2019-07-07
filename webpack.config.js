@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = env => {
   console.log(env);
@@ -7,13 +8,18 @@ module.exports = env => {
     mode: env,
     entry: './src/index.js',
     output: {
+      path: path.resolve(__dirname, 'dist'),
       filename: 'main.js',
-      path: path.resolve(__dirname, 'dist')
     },
     devtool: 'source-map',
     devServer: {
       contentBase: './dist'
     },
+    plugins:[
+      new CopyWebpackPlugin([
+        {from: 'src/assets/images', to: 'images'}
+      ])
+    ],
     module: {
       rules: [
         {
