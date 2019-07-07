@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="row">
+        <div className="row align-items-center">
           <div className="col-2">
             <span className="copyright-note">
               All rights reserved

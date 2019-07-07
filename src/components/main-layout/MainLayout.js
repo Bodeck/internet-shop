@@ -6,7 +6,7 @@ class MainLayout extends Component {
   render() {
     return (
       <div>
-        <Header cartItemsCount={15} />
+        <Header cartItemsCount={4} />
         <main className="container">
           {this.props.children}
         </main>
