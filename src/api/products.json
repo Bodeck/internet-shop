@@ -1,0 +1,47 @@
+ [
+  {
+    "id": 1,
+    "name": "SuperOpticon 2000",
+    "basePrice": 12.00,
+    "description": "Sample product description. Product description placeholder.",
+    "imageUrl": "/images/product.png",
+    "advertMessage": "Extra deal"
+  },
+  {
+    "id": 2,
+    "name": "SunBlaster Light",
+    "basePrice": 60.00,
+    "description": "Sample product description. Product description placeholder.",
+    "imageUrl": "/images/product.png",
+    "advertMessage": "New collection!"
+  },
+  {
+    "id": 3,
+    "name": "Karina XL",
+    "basePrice": 122.00,
+    "description": "Sample product description. Product description placeholder.",
+    "imageUrl": "/images/product.png"
+  },
+  {
+    "id": 4,
+    "name": "Panama Jack",
+    "basePrice": 120.00,
+    "description": "Sample product description. Product description placeholder.",
+    "imageUrl": "/images/product.png"
+  },
+  {
+    "id": 5,
+    "name": "Blackhole Sun",
+    "basePrice": 122.00,
+    "description": "Sample product description. Product description placeholder.",
+    "imageUrl": "/images/product.png",
+    "advertMessage": "Bestseller"
+  },
+  {
+    "id": 6,
+    "name": "Arnold",
+    "basePrice": 122.00,
+    "description": "Sample product description. Product description placeholder.",
+    "imageUrl": "/images/product.png"
+  }
+]
