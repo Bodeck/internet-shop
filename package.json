@@ -6,8 +6,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build && webpack-dev-server --env=development",
-    "build": "webpack --env=development"
+    "start": "webpack-dev-server --env=development",
+    "build": "webpack --env=development",
+    "lint": "eslint ./src/"
   },
   "repository": {
     "type": "git",
@@ -28,10 +29,11 @@
     "copy-webpack-plugin": "^5.0.3",
     "css-loader": "^3.0.0",
     "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.14.2",
     "file-loader": "^4.0.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.35.0",
-    "webpack-cli": "^3.3.4",
+    "webpack-cli": "^3.3.5",
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
