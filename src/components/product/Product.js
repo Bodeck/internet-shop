@@ -1,11 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Product.css';
 
-const Product = ({ match }) => {
-  const productId = match.params.id;
-  const addToCart = (productId) => {
-    console.log(productId)
-  }
+const Product = ({ product, onAddToCartClick }) => {
+
   return (
     <div className="product-page">
       <div className="product-container">
@@ -14,23 +12,23 @@ const Product = ({ match }) => {
         </div>
         <div className="col">
           <div className="product-details-box">
-            <h1 className="product-name">Product</h1>
-            <div className="product-price">$69.00</div>
+            <h1 className="product-name">{product.name}</h1>
+            <div className="product-price">{product.basePrice}</div>
             <p className="product-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-              ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur.
-        </p>
+              {product.description}
+            </p>
             <button className="add-to-cart"
-              onClick={() => addToCart(productId)}>Add To Cart</button>
+              onClick={() => onAddToCartClick(product.id)}>Add To Cart</button>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+Product.propTypes = {
+  product: PropTypes.object,
+  onAddToCartClick: PropTypes.func
+};
 
 export default Product;
