@@ -1,9 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './CartItem.css';
 
-export const CartItem = props => {
-  const product = props.product;
-  
+export const CartItem = ({ product, onPlusClick, onMinusClick, onRemoveProductClick }) => {
+
   return (
     <li className="cart-item">
       <div className="row align-items-center">
@@ -22,17 +22,38 @@ export const CartItem = props => {
             </div>
             <div className="col-2">
               <div className="cart-items-counter">
-                <a href="#" className="cart-action-btn">+</a>
+                <a href="#" className="cart-action-btn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onPlusClick(product.id);
+                  }} >+</a>
                 <div>
-                  <input className="counter-input" type="text" defaultValue="1"></input>
+                  <input className="counter-input" readOnly type="text" value={product.quantity} ></input>
                 </div>
-                <a href="#" className="cart-action-btn">-</a>
+                <a href="#" className="cart-action-btn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onMinusClick(product.id);
+                  }}
+                >-</a>
               </div>
-                <a href="#" className="btn-remove">Remove from cart</a>
+              <a href="#" className="btn-remove"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onRemoveProductClick(product.id);
+                }}
+              >Remove from cart</a>
             </div>
           </div>
         </div>
       </div>
     </li>
-  )
-}
+  );
+};
+
+CartItem.propTypes = {
+  product: PropTypes.object.isRequired,
+  onRemoveProductClick: PropTypes.func.isRequired,
+  onMinusClick: PropTypes.func.isRequired,
+  onPlusClick: PropTypes.func.isRequired  
+};
