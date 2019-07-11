@@ -8,16 +8,15 @@ const CartContainer = ({ removeFromCart, products, addedIds, quantityPerId, addC
   const cartProducts = products.filter((product) =>
     addedIds.find(
       (item) => item === product.id));
-  console.log(cartProducts);
   const cartProductsWithQty = cartProducts.map((product) => ({ ...product, quantity: quantityPerId[product.id] }));
-  console.log(cartProductsWithQty);
-
+  const cartTotalAmt = cartProductsWithQty.reduce((acc,{basePrice,quantity})=> acc + (basePrice * quantity), 0);
   return (
     <CartItemsList
       removeFromCart={removeFromCart}
       cartProducts={cartProductsWithQty}
       addCartItemQty={addCartItemQty}
-      reduceCartItemQty={reduceCartItemQty} />
+      reduceCartItemQty={reduceCartItemQty}
+      totalAmount={cartTotalAmt} />
   );
 };
 
