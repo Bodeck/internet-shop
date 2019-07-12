@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import routes from '../routes';
-import MainLayout from './main-layout/MainLayout'
+import MainLayout from './main-layout/MainLayout';
 
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
           {routes}
         </MainLayout>
       </Router>
-    )
+    );
   }
 }
 
