@@ -1,5 +1,6 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = env => {
   console.log(env);
@@ -18,7 +19,10 @@ module.exports = env => {
     plugins:[
       new CopyWebpackPlugin([
         {from: 'src/assets/images', to: 'images'}
-      ])
+      ]),
+      new HtmlWebpackPlugin({
+        template: 'src/index.html'
+      })
     ],
     module: {
       rules: [
@@ -41,8 +45,12 @@ module.exports = env => {
         {
           test: /\.(png|svg|jpg|gif)$/,
           use: ['file-loader']
+        },
+        {
+          test: /\.html$/,
+          use:['html-loader']
         }
-      ]
+      ],
     }
-  }
+  };
 };
