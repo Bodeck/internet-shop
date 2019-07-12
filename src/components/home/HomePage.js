@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProductListContainer from '../../containers/ProductList';
-import { SortingWidget } from './SortingWidget';
+import SortingWidgetContainer from '../../containers/SortingWidgetContainer'
 import './HomePage.css';
 import Pagination from './Pagination';
 
@@ -11,7 +11,7 @@ export default class HomePage extends Component {
       <div className="home-page">
         <div className="row">
           <aside className="col-3 left-sidebar">
-            <SortingWidget />
+            <SortingWidgetContainer />
           </aside>
           <section className="col-9 products-section">
             <ProductListContainer />

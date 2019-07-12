@@ -2,8 +2,7 @@ import getProducts from '../api/shopApi';
 
 // Actions constants
 export const GET_PRODUCTS = 'GET_PRODUCTS';
-export const SORT_BY_PRICE = 'SORT_BY_PRICE';
-export const SORT_BY_NAME = 'SORT_BY_NAME';
+export const SORT_BY = 'SORT_BY';
 
 // Action creators
 export const receiveProducts = (products) => {
@@ -25,16 +24,10 @@ export const getAllProducts = () => dispatch => {
   });
 };
 
-export const sortByName = (direction) => {
+export const sortBy = (key, direction) => {
   return {
-    type: SORT_BY_NAME,
-    direction
-  };
-};
-
-export const sortByPrice = direction => {
-  return {
-    type: SORT_BY_PRICE,
+    type: SORT_BY,
+    key,
     direction
   };
 };
