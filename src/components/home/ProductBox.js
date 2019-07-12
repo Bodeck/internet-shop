@@ -28,7 +28,7 @@ const ProductBox = ({ product, isFavourite, onAddToCartClick }) => {
           <h3 className="product-name change-on-hover">{product.name}</h3>
           <div className="footer-bottom">
             <span className="base-price change-on-hover">{product.basePrice} $</span>
-            <a href="#" className="add-to-cart visible-on-hover" onClick={()=> onAddToCartClick(product.id)}>
+            <a href="#" className="add-to-cart visible-on-hover" onClick={(e)=> {e.preventDefault(); onAddToCartClick(product.id)}}>
               <CartIcon className="add-to-cart-icon" />
               <span> Add to Cart</span>
             </a>

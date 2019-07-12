@@ -43,5 +43,35 @@
     "basePrice": 122.00,
     "description": "Sample product description. Product description placeholder.",
     "imageUrl": "/images/product.png"
+  },
+  {
+    "id": 7,
+    "name": "Mars",
+    "basePrice": 41.00,
+    "description": "Sample product description. Product description placeholder.",
+    "imageUrl": "/images/product.png",
+    "advertMessage": "Bestseller"
+  },
+  {
+    "id": 8,
+    "name": "Zorro",
+    "basePrice": 156.00,
+    "description": "Sample product description. Product description placeholder.",
+    "imageUrl": "/images/product.png"
+  },
+  {
+    "id": 9,
+    "name": "Mars",
+    "basePrice": 41.00,
+    "description": "Sample product description. Product description placeholder.",
+    "imageUrl": "/images/product.png",
+    "advertMessage": "Bestseller"
+  },
+  {
+    "id": 10,
+    "name": "Zorro",
+    "basePrice": 156.00,
+    "description": "Sample product description. Product description placeholder.",
+    "imageUrl": "/images/product.png"
   }
 ]

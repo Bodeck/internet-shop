@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ProductListContainer from '../../containers/ProductList';
 import SortingWidgetContainer from '../../containers/SortingWidgetContainer'
 import './HomePage.css';
-import Pagination from './Pagination';
+// import Pagination from './Pagination';
 
 export default class HomePage extends Component {
 
@@ -15,7 +15,7 @@ export default class HomePage extends Component {
           </aside>
           <section className="col-9 products-section">
             <ProductListContainer />
-            <Pagination pageCount={5} />
+            {/* <Pagination pageCount={5} /> */}
           </section>
         </div>
       </div>

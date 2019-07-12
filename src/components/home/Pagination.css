@@ -21,8 +21,9 @@
   opacity: .4;
 }
 
-.pagination-link:hover {
+.pagination-link:hover, .pagination-link-active {
   opacity: 1;
+  color: #000000;
 }
 
 .pagination-btn {
